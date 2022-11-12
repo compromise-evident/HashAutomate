@@ -1,0 +1,8 @@
+/*	HashAutomate log
+
+
+
+Version 1.0.0   Now you can see if GitHub is modifying your repositories.  Right
+                now, the "big singular hash" is the same no matter what the link
+                order. This is useful if you have only few or mis-ordered links.
+                Saturday, November 12 2022    */
