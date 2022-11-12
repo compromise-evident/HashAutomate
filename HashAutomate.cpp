@@ -36,10 +36,10 @@ int main()
 	
 	//Checks if file "Links" is missing or empty.
 	in_stream.open("Links");
-	if(in_stream.fail() == true) {cout << "File \"Links\" is missing"; in_stream.close(); return 0;}
+	if(in_stream.fail() == true) {cout << "File \"Links\" is missing."; in_stream.close(); return 0;}
 	char garbage_byte;
 	in_stream.get(garbage_byte);
-	if(in_stream.eof() == true)  {cout << "File \"Links\" is empty.";  in_stream.close(); return 0;}
+	if(in_stream.eof() == true)  {cout << "File \"Links\" is empty.";   in_stream.close(); return 0;}
 	in_stream.close();
 	
 	//Counts number of links.
