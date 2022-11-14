@@ -59,11 +59,11 @@ int main()
 	int hash_of_all_files[1280] = {0};
 	long links_read_bookmark = -1;
 	bool at_least_1_download_problem = false;
-	for(int a = 0; a < number_of_links; a++)
+	for(long a = 0; a < number_of_links; a++)
 	{	//..........Loads a link.
 		in_stream.open("Links");
 		links_read_bookmark++;
-		for(int b = 0; b < links_read_bookmark; b++) {in_stream.get(garbage_byte);} //..........Skips link Bytes that have been read.
+		for(long b = 0; b < links_read_bookmark; b++) {in_stream.get(garbage_byte);} //..........Skips link Bytes that have been read.
 		char wget[1000015] = {"wget -q -t 9 "};
 		int wget_write_bookmark = 13;
 		in_stream.get(garbage_byte);
