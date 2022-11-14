@@ -6,6 +6,7 @@ Version 2.0.0   Much faster. Hash of individual is crunched from both  sha256sum
                 and sha512sum of individual files, then as usual, the individual
                 hash are combined  constructively  to  form hash_of_all_files[].
                 So the custom hash runs through file shas  instead of the files.
+               >Not compatible with previous, upgrade if your downloads are big.
                 Sunday, November 13 2022
 
 Version 1.0.0   Now you can see if GitHub is modifying your repositories.  Right
