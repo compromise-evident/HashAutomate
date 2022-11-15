@@ -2,8 +2,12 @@
 
 
 
+Version 2.0.2   Drag  &  drop links file  (still saves output to file but now to
+                the given directory as the same file name, with -saved appended.
+                Tuesday, November 15 2022
+
 Version 2.0.1   Now saves output to file HA_saved so you have ref. just in case.
-                Monday, November 14, 2022
+                Monday, November 14 2022
 
 Version 2.0.0   Much faster. Hash of individual is crunched from both  sha256sum
                 and sha512sum of individual files, then as usual, the individual
