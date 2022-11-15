@@ -8,7 +8,7 @@ Downloads from links in a file, prints sha256sum of individual and 1 big hash of
   <img src="https://github.com/compromise-evident/HashAutomate/blob/main/Other/Terminal.png">
 </p>
 
-[Auditing in the browser?](https://coliru.stacked-crooked.com/a/9a50cdae6754c3d6)
+[Auditing in the browser?](https://coliru.stacked-crooked.com/a/9d9b992eaf7abb8e)
 
 
 
