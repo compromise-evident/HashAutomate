@@ -35,8 +35,8 @@ int main()
 	ofstream out_stream;
 	
 	//Gets path to file from user.
-	cout << "\nMake a file with 1 download link per line.\n";
-	cout << "Drag & drop file into terminal or enter path:\n\n";
+	cout << "\nMake a file with 1 download link per line.\n"
+	     << "Drag & drop file into terminal or enter path:\n\n";
 	char  path_to_file[10000];
 	for(int a = 0; a < 10000; a++) {path_to_file[a] = '\0';} //Fills path_to_file[] with null.
 	//char catching_new_line[1]; //Uncomment these 2 if you make cin >> where you press enter before dropping path.
