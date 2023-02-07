@@ -1,4 +1,5 @@
-/// HashAutomate - downloads from links in a file, prints sha256sum of individual and 1 big hash of all.
+/// HashAutomate - downloads from links in a file,
+/// prints sha256sum of individual and 1 big hash of all.
 /// Nikolay Valentinovich Repnitskiy - License: WTFPLv2+ (wtfpl.net)
 
 
@@ -36,7 +37,7 @@ int main()
 	
 	//Gets path to file from user.
 	cout << "\nMake a file with 1 download link per line.\n"
-	     << "Drag & drop file into terminal or enter path:\n\n";
+	     << "Drag & drop file into terminal or enter path:\n";
 	char  path_to_file[10000];
 	for(int a = 0; a < 10000; a++) {path_to_file[a] = '\0';} //Fills path_to_file[] with null.
 	//char catching_new_line[1]; //Uncomment these 2 if you make cin >> where you press enter before dropping path.
