@@ -5,7 +5,7 @@ Downloads from links in a file, prints sha256sum of individual and 1 big hash of
 
 
 <p align="center">
-  <img src="https://github.com/compromise-evident/HashAutomate/blob/main/Other/Terminal-a746081cb4a235421e315a7d15546222c4bae27e69f1126e54ee058da1b38449.png">
+  <img src="https://raw.githubusercontent.com/compromise-evident/HashAutomate/main/Other/HashAutomate_terminal_167215a3f68aa98e70138110c38e971b2c6517ec8a4649f8585665f2140b1129.png">
 </p>
 
 [Auditing in the browser?](https://coliru.stacked-crooked.com/a/7267e4a778a98cf5)
