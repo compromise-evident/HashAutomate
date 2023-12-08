@@ -88,7 +88,7 @@ int main()
 	
 	
 	//Begins.
-	cout       << "\n\n";
+	cout << "\n\n";
 	int hash_of_all_files[1280] = {0};
 	long links_read_bookmark = -1;
 	bool at_least_1_download_problem = false;
