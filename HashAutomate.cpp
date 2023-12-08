@@ -83,7 +83,11 @@ int main()
 	
 	if(temp_garbage_byte != '\n') {number_of_links++;}
 	
-	//Downloads everything and makes a singular hash of everything, as well as sha256sum of individual.
+	
+	
+	
+	
+	//Begins.
 	cout       << "\n\n";
 	out_stream << "(HashAutomate) - Links from " << path_to_file << "\n\n\n";
 	int hash_of_all_files[1280] = {0};
