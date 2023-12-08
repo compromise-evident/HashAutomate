@@ -14,8 +14,4 @@ sha256sum of individual and 1 big hash of all, regardless of link order.
 <br>
 <br>
 
-
-
-# Purpose
-
-Detect if a file host changed something. CAUTION: [hash are not what you think](https://github.com/compromise-evident/WhatNot/blob/main/Hash%20collision%20calculator.pdf).
+**CAUTION:** [hash are not what you think](https://github.com/compromise-evident/WhatNot/blob/main/Hash%20collision%20calculator.pdf).
