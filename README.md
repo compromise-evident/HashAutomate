@@ -14,4 +14,4 @@ sha256sum of individual and 1 big hash of all, regardless of link order.
 <br>
 <br>
 
-[No hash is perfect](https://github.com/compromise-evident/WhatNot/blob/main/Hash%20collision%20calculator.pdf).
+[No hash is perfect.](https://github.com/compromise-evident/WhatNot/blob/main/Hash%20collision%20calculator.pdf)
