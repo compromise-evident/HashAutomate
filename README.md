@@ -1,5 +1,6 @@
 <!---
-Downloads from links in a file, prints sha256sum of individual and 1 big hash of all, regardless of link order.
+Detect if file hosts changed something. Downloads from links in a file, saves
+sha256sum of individual and 1 big hash of all, regardless of link order.
 -->
 
 
