@@ -6,7 +6,7 @@ sha256sum of individual and 1 big hash of all, regardless of link order.
 
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/compromise-evident/HashAutomate/main/Other/HashAutomate_terminal_167215a3f68aa98e70138110c38e971b2c6517ec8a4649f8585665f2140b1129.png">
+  <img src="https://raw.githubusercontent.com/compromise-evident/HashAutomate/main/Other/Terminal_6dc031728f353dc013b64f375f0dc865f29854b65b56084debfe3e7bd49bebd2.png">
 </p>
 
 [Auditing in the browser?](https://coliru.stacked-crooked.com/a/1b55a35c53b304a0)
