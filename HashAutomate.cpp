@@ -1,9 +1,9 @@
-/// HashAutomate - detect if file hosts changed something. Downloads from links in a file, saves
-///                sha256sum of individual and 1 big hash of all, regardless of link order.
-/// Nikolay Valentinovich Repnitskiy - License: WTFPLv2+ (wtfpl.net)
+/// HashAutomate - detect if file hosts changed something. Downloads
+///                from links in a file, saves sha256sum of individual
+///                and 1 big hash of all, regardless of link order.
 
 
-/* Version 2.0.2
+/* Version 2.0.3
 #########*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*##########
 #####'`                                                                  `'#####
 ###'                                                                        '###
@@ -26,22 +26,59 @@ int main()
 	//Gets path to file from user.
 	cout << "\nMake a file with 1 download link per line.\n"
 	     << "Drag & drop file into terminal or enter path:\n";
-	char  path_to_file[10000];
-	for(int a = 0; a < 10000; a++) {path_to_file[a] = '\0';} //Fills path_to_file[] with null.
-	//char catching_new_line[1]; //Uncomment these 2 if you make cin >> where you press enter before dropping path.
-	//cin.getline(catching_new_line, 1);
-	cin.getline(path_to_file, 10000);
-	if(path_to_file[0] == '\0') {cout << "\nNo path given.\n"; return 0;}
 	
-	//Fixes path to file if drag & dropped (removes single quotes for ex:)   '/home/nikolay/my documents/links'
-	if(path_to_file[0] == '\'')
-	{	for(int a = 0; a < 10000; a++)
-		{	path_to_file[a] = path_to_file[a + 1];
-			if(path_to_file[a] == '\'')
-			{	path_to_file[a] = '\0';
-				path_to_file[a + 1] = '\0';
-				path_to_file[a + 2] = '\0';
+	//..........Gets path then fixes it if drag-n-dropped, regardless of single-quote presence and "enter"
+	//..........not being cleared, meaning you can have options before this, where the user presses enter.
+	char path_to_file[10000] = {'\0'};
+	{	for(int a = 0; a < 10000; a++) {path_to_file[a] = '\0';}
+		cin.getline(path_to_file, 10000);
+		if(path_to_file[0] == '\0')
+		{	for(int a = 0; a < 10000; a++) {path_to_file[a] = '\0';}
+			cin.getline(path_to_file, 10000);
+		}
+		if(path_to_file[0] == '\0') {cout << "\nNo path given.\n"; return 0;}
+		
+		//..........Removes last space in path_to_file[].
+		bool existence_of_last_space = false;
+		for(int a = 9999; a > 0; a--)
+		{	if(path_to_file[a] != '\0')
+			{	if(path_to_file[a] == ' ') {path_to_file[a] = '\0'; existence_of_last_space = true;}
 				break;
+			}
+		}
+		
+		//..........Removes encapsulating single-quotes in path_to_file[].
+		bool existence_of_encapsulating_single_quotes = false;
+		if(path_to_file[0] == '\'')
+		{	for(int a = 0; a < 9999; a++)
+			{	path_to_file[a] = path_to_file[a + 1];
+				if(path_to_file[a] == '\0') 
+				{	if(path_to_file[a - 1] != '\'') {cout << "\nBad path.\n"; return 0;}
+					path_to_file[a - 1] = '\0';
+					existence_of_encapsulating_single_quotes = true;
+					break;
+				}
+			}
+		}
+		
+		//..........Replaces all "'\''" with "'" in path_to_file[].
+		int single_quote_quantity = 0;
+		for(int a = 0; a < 10000; a++)
+		{	if(path_to_file[a] == '\'') {single_quote_quantity++;}
+		}
+		
+		if((single_quote_quantity                     >    0)
+		&& (existence_of_last_space                  == true)
+		&& (existence_of_encapsulating_single_quotes == true))
+		{	if((single_quote_quantity % 3) != 0) {cout << "\nBad path.\n"; return 0;}
+			
+			for(int a = 0; a < 9997; a++)
+			{	if(path_to_file[a] == '\'')
+				{	int temp = (a + 1);
+					for(; temp < 9997; temp++)
+					{	path_to_file[temp] = path_to_file[temp + 3];
+					}
+				}
 			}
 		}
 	}
@@ -232,7 +269,7 @@ int main()
 		out_stream << "\n\nAt least 1 download failed; the big hash is useless.";
 	}
 	else
-	{	//Prints big hash.
+	{	//..........Prints big hash.
 		cout       << "\n-------------1,280-character hash of all files REGARDLESS OF ORDER:-------------\n";
 		out_stream << "\n-------------1,280-character hash of all files REGARDLESS OF ORDER:-------------\n";
 		for(int a = 0; a < 1280; a++)
