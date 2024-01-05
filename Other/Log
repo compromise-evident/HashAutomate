@@ -1,0 +1,27 @@
+HashAutomate
+
+
+
+Version 2.0.3   Universal drag-n-drop; gets path then fixes it if drag-n-dropped
+                regardless of single-quote presence & "enter" not being cleared,
+                meaning you can have options before it where user presses enter.
+                Jan 5 2024
+
+Version 2.0.2   Drag  &  drop links file  (still saves output to file but now to
+                the given directory as the same file name, with -saved appended.
+                Nov 15 2022
+
+Version 2.0.1   Now saves output to file HA_saved so you have ref. just in case.
+                Nov 14 2022
+
+Version 2.0.0   Much faster. Hash of individual is crunched from both  sha256sum
+                and sha512sum of individual files, then as usual, the individual
+                hash are combined  constructively  to  form hash_of_all_files[].
+                So the custom hash runs through file shas  instead of the files.
+             -> Not compatible with previous, upgrade if your downloads are big.
+                Nov 13 2022
+
+Version 1.0.0   Now you can see if GitHub is modifying your repositories.  Right
+                now, the "big singular hash" is the same no matter what the link
+                order. This is useful if you have only few or mis-ordered links.
+                Nov 12 2022
