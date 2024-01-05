@@ -1,15 +1,6 @@
-<!---
-Detect if file hosts changed something. Downloads from links in a file, saves
-sha256sum of individual and 1 big hash of all, regardless of link order.
--->
-
-
-
 <p align="center">
   <img src="https://raw.githubusercontent.com/compromise-evident/HashAutomate/main/Other/Terminal_6dc031728f353dc013b64f375f0dc865f29854b65b56084debfe3e7bd49bebd2.png">
 </p>
-
-[Auditing in the browser?](https://coliru.stacked-crooked.com/a/79431c0ea48f9e4c)
 
 <br>
 <br>
