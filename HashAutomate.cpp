@@ -24,8 +24,7 @@ int main()
 	ofstream out_stream;
 	
 	//Gets path to file from user.
-	cout << "\nMake a file with 1 download link per line.\n"
-	     << "Drag & drop file into terminal or enter path:\n";
+	cout << "\nDrop/enter file with 1 download link per line:\n";
 	
 	//..........Gets path then fixes it if drag-n-dropped, regardless of single-quote presence and "enter"
 	//..........not being cleared, meaning you can have options before this, where the user presses enter.
