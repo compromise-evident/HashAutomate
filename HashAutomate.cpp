@@ -18,7 +18,6 @@
 #include <fstream>
 #include <iostream>
 using namespace std;
-
 int main()
 {	ifstream in_stream;
 	ofstream out_stream;
